@@ -1,13 +1,47 @@
-package model;
+package ui;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class Mapp {
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import model.Edge;
+import model.Node;
+
+public class Mapp extends Stage{
 
 	private ArrayList<Node> node;
 	private ArrayList<Edge> edge;
 	
+	public Mapp() {
+
+		try {
+			
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Map.fxml"));
+			Parent root;
+			root = loader.load();
+			
+			Scene scene = new Scene(root, 714, 687);
+			setScene(scene);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+
+	}
+	public void addNode(Node n) {
+		node.add(n);
+	}
+	
 	public void importDates() {
+		
+		ArrayList<Edge> u= new ArrayList<>();
+		Node n=new Node(u,"ESTACION UNIVALLE","Carrera 100 con Calle 13");
+		
 		/* 
 		 * ESTACION UNIVERSIDADES – Carrera 100 con Calle 16
 
