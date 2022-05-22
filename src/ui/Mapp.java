@@ -3,40 +3,43 @@ package ui;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import model.Edge;
 import model.Node;
 
 public class Mapp extends Stage{
-
+	
+	private static Mapp instance;
 	private ArrayList<Node> node;
 	private ArrayList<Edge> edge;
 	
-	public Mapp() {
-
-		try {
-			
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("Map.fxml"));
-			Parent root;
-			root = loader.load();
-			
-			Scene scene = new Scene(root, 714, 687);
-			setScene(scene);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	public Mapp() throws IOException {
+		
+	}
+	
+	public static Mapp getInstance() throws IOException {
+		if (instance == null) {
+			instance = new Mapp();
+			;
 		}
 
-
-
+		return instance;
+	}
+	
+	private void init() {
+		// TODO Auto-generated method stub
+		
 	}
 	public void addNode(Node n) {
 		node.add(n);
 	}
-	
+
 	public void importDates() {
 		
 		ArrayList<Edge> u= new ArrayList<>();
@@ -154,4 +157,5 @@ ESTACION VIPASA – Avenida 3N con Calle 44N
 ESTACION ALAMOS – Avenida 3N con Calle 52N
 		 * */
 	}
+
 }
