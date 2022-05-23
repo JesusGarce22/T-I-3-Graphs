@@ -67,16 +67,16 @@
       <Line fx:id="primitivoCienpalos" endX="-9.0" endY="-10.75" layoutX="429.0" layoutY="281.0" startX="5.0" startY="-3.0" />
       <Line fx:id="sanPascualCienpalos" endX="-14.0" endY="-13.25" layoutX="404.0" layoutY="266.0" startX="10.75" startY="1.25" />
       <Circle fx:id="lido" fill="DODGERBLUE" layoutX="296.0" layoutY="353.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="pampalinda2" fill="DODGERBLUE" layoutX="288.0" layoutY="372.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="pampalinda3" fill="DODGERBLUE" layoutX="297.0" layoutY="402.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="unidadDeportiva" fill="DODGERBLUE" layoutX="288.0" layoutY="372.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="plazaDetoros" fill="DODGERBLUE" layoutX="297.0" layoutY="402.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
       <Line fx:id="pampalindaPlazadetoros" endX="0.5" endY="12.75" layoutX="300.0" layoutY="413.0" startX="-2.25" startY="-8.0" />
       <Circle fx:id="Icesi" fill="DODGERBLUE" layoutX="402.0" layoutY="656.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
       <Line fx:id="universidadesIcesi" endX="37.0" endY="59.0" layoutX="363.0" layoutY="591.0" startX="18.75" startY="8.25" />
       <Line fx:id="uDeportivaPlazadetoros" endX="0.75" endY="15.0" layoutX="297.0" layoutY="384.0" startX="-1.75" startY="-11.25" />
       <Line fx:id="uDeportivaLido" endX="-13.0" endY="-25.5" layoutX="307.0" layoutY="394.0" startX="-10.75" startY="-38.75" />
-      <Circle fx:id="pampalinda11" fill="DODGERBLUE" layoutX="219.0" layoutY="365.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="pampalinda12" fill="DODGERBLUE" layoutX="229.0" layoutY="356.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="pampalinda13" fill="DODGERBLUE" layoutX="242.0" layoutY="354.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="brisasdeMayo" fill="DODGERBLUE" layoutX="219.0" layoutY="365.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="LlerasCamargo" fill="DODGERBLUE" layoutX="229.0" layoutY="356.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="TierraBlanca" fill="DODGERBLUE" layoutX="242.0" layoutY="354.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
       <Line fx:id="uDeportivaTierraBlanca" endX="-46.25" endY="-48.75" layoutX="292.0" layoutY="403.0" startX="-8.5" startY="-36.5" />
       <Line fx:id="llerasCamargoTierraBlanca" endX="-63.0" endY="-59.25" layoutX="302.0" layoutY="413.0" startX="-70.25" startY="-57.25" />
       <Line fx:id="llerasCamargoBrisasdeMayo" endX="-85.25" endY="-64.5" layoutX="312.0" layoutY="423.0" startX="-90.5" startY="-59.25" />
@@ -114,9 +114,9 @@
       <Line fx:id="andresSaninSietedeAgosto" endX="86.25" endY="-243.75" layoutX="489.0" layoutY="483.0" startX="102.0" startY="-243.75" />
       <Line fx:id="aguablancaAndresSanin" endX="10.5" endY="69.75" layoutX="590.0" layoutY="306.0" startX="4.0" startY="-53.75" />
       <Line fx:id="simonBolivarRefugio" endX="-108.0" endY="-33.0" layoutX="416.0" layoutY="482.0" startX="-15.0" startY="-22.5" />
-      <Circle fx:id="santaRosa1" fill="DODGERBLUE" layoutX="373.0" layoutY="212.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="plazaCayzedo" fill="DODGERBLUE" layoutX="373.0" layoutY="212.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="ermita" fill="DODGERBLUE" layoutX="369.0" layoutY="198.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="sanPadro" fill="DODGERBLUE" layoutX="376.0" layoutY="198.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="sanPedro" fill="DODGERBLUE" layoutX="376.0" layoutY="198.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="torredeCali" fill="DODGERBLUE" layoutX="375.0" layoutY="190.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="centro" fill="DODGERBLUE" layoutX="377.0" layoutY="224.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
       <Line fx:id="sucrePetecuy" endX="9.0" endY="-166.0" layoutX="377.0" layoutY="394.0" startX="15.25" startY="-149.5" />

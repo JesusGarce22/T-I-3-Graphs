@@ -43,7 +43,6 @@ public class Mapp extends Stage{
 	public void importDates() {
 		
 		ArrayList<Edge> u= new ArrayList<>();
-		Node n=new Node(u,"ESTACION UNIVALLE","Carrera 100 con Calle 13");
 		
 		/* 
 		 * ESTACION UNIVERSIDADES – Carrera 100 con Calle 16

@@ -18,6 +18,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import model.Edge;
+import model.Node;
 
 public class MainWindows extends Stage {
 	@FXML
@@ -69,9 +70,9 @@ public class MainWindows extends Stage {
 	@FXML
 	private Line salomiaPopular;
 	@FXML
-	private Circle pampalinda12;
+	private Circle TierraBlanca;
 	@FXML
-	private Circle pampalinda13;
+	private Circle unidadDeportiva;
 	@FXML
 	private Circle Icesi;
 	@FXML
@@ -79,7 +80,7 @@ public class MainWindows extends Stage {
 	@FXML
 	private Circle pampalinda;
 	@FXML
-	private Circle pampalinda11;
+	private Circle plazaDetoros;
 	@FXML
 	private Line simonBolivarRefugio;
 	@FXML
@@ -233,7 +234,7 @@ public class MainWindows extends Stage {
 	@FXML
 	private Line florestaAtanasioGirardot;
 	@FXML
-	private Circle sanPadro;
+	private Circle sanPedro;
 	@FXML
 	private Line manzanadelsaberEstadio;
 	@FXML
@@ -293,7 +294,7 @@ public class MainWindows extends Stage {
 	@FXML
 	private Circle lido;
 	@FXML
-	private Circle pampalinda2;
+	private Circle plazaCayzedo;
 	@FXML
 	private Line chapineroAtanasioGirardot;
 	@FXML
@@ -318,12 +319,19 @@ public class MainWindows extends Stage {
 	private Button searchBt;
 	@FXML
 	private ComboBox<String> now;
+	 @FXML
+	    private Circle LlerasCamargo;
+
+	    @FXML
+	    private Circle brisasdeMayo;
 
 	@FXML
 	private ComboBox<String> then;
+	
+	private static ArrayList<Node> node= new ArrayList<Node>();;
 
 	public MainWindows() {
-
+		//node 
 	}
 
 	@FXML
@@ -363,16 +371,92 @@ public class MainWindows extends Stage {
 	}
 
 	public void chargeComboBox() {
-		now.getItems().addAll(
-			"Univalle"	,
-			"Universidades"
-				);
+		loadNodes();
+		ArrayList<String> items=new ArrayList<String>();
+			for(int i=0;i<node.size();i++) {
+				if(node.get(i)!=null) {
+					//.add(node.get(i).showName());
+					System.out.println(node.get(i).getName());
+					System.out.println(node.get(i));
+				}
+				
+			}
+		now.getItems().addAll(items);
 	}
 
 	@FXML
 	void back(ActionEvent event) throws IOException {
 		loadLogin();
 		this.close();
+	}
+	
+	public void loadNodes() {
+		node.add(new Node(null,nuevoLatir));
+		node.add(new Node(null,aguablanca));
+		node.add(new Node(null,calipso));
+		node.add(new Node(null,andresSanin));
+		node.add(new Node(null,sieteDeAgosto));
+		node.add(new Node(null,villacolombia));
+		node.add(new Node(null,villanueva));
+		node.add(new Node(null,elTrebol));
+		node.add(new Node(null,atanasioGirardot));
+		node.add(new Node(null,belalzacar));
+		node.add(new Node(null,chapinero));
+		node.add(new Node(null,troncalUnida));
+		node.add(new Node(null,sanPascual));
+		node.add(new Node(null,floraIndustrial));
+		node.add(new Node(null,alamos));
+		node.add(new Node(null,capri));
+		node.add(new Node(null,conquistadores));
+		node.add(new Node(null,Icesi));
+		node.add(new Node(null,TierraBlanca));
+		node.add(new Node(null,unidadDeportiva));
+		node.add(new Node(null,pampalinda));
+		node.add(new Node(null,pradosdelNorte));
+		node.add(new Node(null,plazaDetoros));
+		node.add(new Node(null,chiminangos));
+		node.add(new Node(null,salomia));
+		node.add(new Node(null,buitrera));
+		node.add(new Node(null,primitivo));
+		node.add(new Node(null,santaRosa));
+		node.add(new Node(null,centro));
+		node.add(new Node(null,santaMonica));
+		node.add(new Node(null,sanBosco));
+		node.add(new Node(null,popular));
+		node.add(new Node(null,vipasa));
+		node.add(new Node(null,sanNicolas));
+		node.add(new Node(null,versalles));
+		node.add(new Node(null,caldas));
+		node.add(new Node(null,rioCali));
+		node.add(new Node(null,Menga));
+		node.add(new Node(null,cienPalos));
+		node.add(new Node(null,santaLibrada));
+		node.add(new Node(null,frayDamian));
+		node.add(new Node(null,fatima));
+		node.add(new Node(null,universidades));
+		node.add(new Node(null,torredeCali));
+		node.add(new Node(null,estadio));
+		node.add(new Node(null,piloto));
+		node.add(new Node(null,pasodelComercio));
+		node.add(new Node(null,simonBolivar));
+		node.add(new Node(null,amanecer));
+		node.add(new Node(null,sanPedro));
+		node.add(new Node(null,melendez));
+		node.add(new Node(null,sucre));
+		node.add(new Node(null,manzanares));
+		node.add(new Node(null,petecuy));
+		node.add(new Node(null,manzanadelSaber));
+		node.add(new Node(null,univalle));
+		node.add(new Node(null,ermita));
+		node.add(new Node(null,lasAmericas));
+		node.add(new Node(null,tequendama));
+		node.add(new Node(null,refugio));
+		node.add(new Node(null,lido));
+		node.add(new Node(null,plazaCayzedo));
+		node.add(new Node(null,floresta));
+		node.add(new Node(null,LlerasCamargo));
+		node.add(new Node(null,brisasdeMayo));
+		
 	}
 
 }

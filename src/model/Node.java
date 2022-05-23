@@ -2,15 +2,15 @@ package model;
 
 import java.util.ArrayList;
 
+import javafx.scene.shape.Circle;
+
 public class Node {
 
 	private ArrayList<Edge> edge;
-	private String name;
-	private String direction;
-	public Node(ArrayList<Edge> edge, String name,String direction) {
+	private Circle name;
+	public Node(ArrayList<Edge> edge, Circle name) {
 		this.edge = edge;
 		this.name = name;
-		this.direction= direction;
 	}
 	public ArrayList<Edge> getEdge() {
 		return edge;
@@ -18,18 +18,15 @@ public class Node {
 	public void setEdge(ArrayList<Edge> edge) {
 		this.edge = edge;
 	}
-	public String getName() {
+	public Circle getName() {
 		return name;
 	}
-	public void setName(String name) {
+	public void setName(Circle name) {
 		this.name = name;
 	}
-	public String getDirection() {
-		return direction;
+	public String showName() {
+		// TODO Auto-generated method stub
+		return name.toString();
 	}
-	public void setDirection(String direction) {
-		this.direction = direction;
-	}
-	
 	
 }
