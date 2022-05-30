@@ -330,11 +330,14 @@ public class MainWindows extends Stage {
 	private static double[][] distances;
 	
 	
-	private static ArrayList<Edge> edge;
+	private static ArrayList<Line> edge;
 	private static ArrayList<Circle> node;
+	private static ArrayList<Edge> eg;
 
 	public MainWindows() {
 		node= new ArrayList<Circle>();
+		edge = new ArrayList<Line>();
+		eg = new ArrayList<Edge>();
 		
 	}
 
@@ -462,8 +465,173 @@ public class MainWindows extends Stage {
 		node.add(brisasdeMayo);
 		
 	}
+	
+	public void loadEdge() {
+		
+		edge.add(FrayDamianCentro);
+		edge.add(ManzanaresFatima);
+		edge.add(ManzanaresPopular);
+		edge.add(TequendamaLido);
+		edge.add(aguablancaAndresSanin);
+		edge.add(amanecerNuevoLatir);
+		edge.add(amanecerTroncalunida);
+		edge.add(andresSaninCalipso);
+		edge.add(andresSaninChiminangos);
+		edge.add(andresSaninPasoDelComercio);
+		edge.add(andresSaninSalomia);
+		edge.add(andresSaninSietedeAgosto);
+		edge.add(belalcazarSanPascual);
+		edge.add(buitreraUnivalle);
+		edge.add(calipsoConquistadores);
+		edge.add(capriMelendez);
+		edge.add(centroErmita);
+		edge.add(centroPlazadecaicedo);
+		edge.add(chapineroAtanasioGirardot);
+		edge.add(chapineroEltrebol);
+		edge.add(ermitaTorredecali);
+		edge.add(florestaAtanasioGirardot);
+		edge.add(florestaBelalcazar);
+		edge.add(lasAmericasPradosdelnorte);
+		edge.add(lasAmericasTorredecali);
+		edge.add(lasAmericasVersalles);
+		edge.add(llerasCamargoBrisasdeMayo);
+		edge.add(llerasCamargoTierraBlanca);
+		edge.add(manzanadelsaberEstadio);
+		edge.add(manzanadelsaberSantaLibrada);
+		edge.add(melendezBuitrera);
+		edge.add(mengaAlamos);
+		edge.add(mengaChiminangos);
+		edge.add(mengaPasodelComercio);
+		edge.add(nuevoLatirAguablanca);
+		edge.add(nuevoLatirAndresSanin);
+		edge.add(pampalindaPlazadetoros);
+		edge.add(pampalindaRefugio);
+		edge.add(pasoDelComercioChiminangos);
+		edge.add(primitivoCienpalos);
+		edge.add(refugioCaldas);
+		edge.add(rioCaliTorredecali);
+		edge.add(sanNicolasTorredecali);
+		edge.add(sanPascualCienpalos);
+		edge.add(sanPedroPetecuy);
+		edge.add(sanPedroTorredecali);
+		edge.add(simonBolivarRefugio);
+		edge.add(simonBolivarUniversidades);
+		edge.add(sucreBelalcazar);
+		edge.add(sucrePetecuy);
+		edge.add(sucreSanPascual);
+		edge.add(tequendamaEstadio);
+		edge.add(uDeportivaLido);
+		edge.add(uDeportivaPlazadetoros);
+		edge.add(uDeportivaTierraBlanca);
+		edge.add(univalleUniversidades);
+		edge.add(universidadesIcesi);
+		edge.add(villacolombiaEltrebol);
+		edge.add(villacolombiaSietedeAgosto);
+		edge.add(villanuevaConquistadores);
+		edge.add(villanuevaSantamonica);
+		edge.add(vipasaPradosdelnorte);
+		edge.add(FrayDamianSanPascual);
+		edge.add(FrayDamianSantaRosa);
+		edge.add(caldasCapri);
+		edge.add(calipsoSimonbolivar);
+		edge.add(calipsoTroncalUnida);
+		edge.add(chiminangosFloraindustrial);
+		edge.add(fatimaPiloto);
+		edge.add(fatimaRiocali);
+		edge.add(primitivoSantamonica);
+		edge.add(salomiaFloraindustrial);
+		edge.add(salomiaPopular);
+		edge.add(sanBoscoSanPascual);
+		edge.add(sanBoscoSantaLibrada);
+		edge.add(sanNicolasPiloto);
+		edge.add(vipasaAlamos);
+		
+		////////////////////////////////////////////////////////////////////////////////////////////
+		
+		eg.add(new Edge(universidadesIcesi, 3600, null));
+		eg.add(new Edge(univalleUniversidades, 950 , null));
+		eg.add(new Edge(buitreraUnivalle , 450, null));
+		eg.add(new Edge(melendezBuitrera, 600 , null));
+		eg.add(new Edge(capriMelendez , 1200, null));
+		eg.add(new Edge(caldasCapri ,900 , null));
+		eg.add(new Edge(refugioCaldas , 500 , null));
+		//eg.add(new Edge( , , null));
+		eg.add(new Edge(pampalindaRefugio ,550, null));
+		eg.add(new Edge(pampalindaPlazadetoros ,700 , null));
+		eg.add(new Edge(uDeportivaPlazadetoros ,650 , null));
+		eg.add(new Edge(uDeportivaLido , 450 , null));
+		eg.add(new Edge(TequendamaLido,550 , null));
+		eg.add(new Edge(tequendamaEstadio, 1000 , null));
+		eg.add(new Edge(manzanadelsaberEstadio ,450, null));
+		eg.add(new Edge(manzanadelsaberSantaLibrada ,700 , null));
+		eg.add(new Edge(sanBoscoSantaLibrada,550, null));
+		eg.add(new Edge(sanBoscoSanPascual,600 , null));
+		eg.add(new Edge(FrayDamianSanPascual , 250, null));
+		eg.add(new Edge(FrayDamianSantaRosa ,900, null));
+		eg.add(new Edge(null ,250 , null));
+		eg.add(new Edge(centroPlazadecaicedo,450 , null));
+		eg.add(new Edge(null, 110 , null));
+		eg.add(new Edge(ermitaTorredecali , 450 , null));
+		eg.add(new Edge(null ,600, null));
+		eg.add(new Edge(lasAmericasVersalles , 300 , null));
+		eg.add(new Edge(lasAmericasPradosdelnorte ,1500 , null));
+		eg.add(new Edge(vipasaPradosdelnorte,550 , null));
+		eg.add(new Edge(vipasaAlamos ,900 , null));
+		eg.add(new Edge(mengaAlamos ,900 , null));
+		eg.add(new Edge(sucreSanPascual , 300, null));
+		eg.add(new Edge(sucrePetecuy ,600 , null));
+		eg.add(new Edge(sanPedroPetecuy, 650, null));
+		eg.add(new Edge(sanPedroTorredecali ,280, null));
+		eg.add(new Edge(rioCaliTorredecali ,700 , null));
+		eg.add(new Edge(sanNicolasTorredecali ,600 , null));
+		eg.add(new Edge(sanNicolasPiloto ,400 , null));
+		eg.add(new Edge(fatimaPiloto ,750 , null));
+		eg.add(new Edge(fatimaRiocali ,1100 , null));
+		eg.add(new Edge(ManzanaresFatima ,600 , null));
+		eg.add(new Edge(ManzanaresPopular,1200 , null));
+		eg.add(new Edge(salomiaPopular ,650, null));
+		eg.add(new Edge(salomiaFloraindustrial ,1700 , null));
+		eg.add(new Edge(chiminangosFloraindustrial ,1700 , null));
+		eg.add(new Edge(pasoDelComercioChiminangos ,1900 , null));
+		eg.add(new Edge(mengaPasodelComercio ,3000 , null));
+		eg.add(new Edge(simonBolivarRefugio ,2900 , null));
+		eg.add(new Edge(simonBolivarUniversidades ,3700 , null));
+		eg.add(new Edge(calipsoSimonbolivar ,4400 , null));
+		eg.add(new Edge(andresSaninCalipso ,3100 , null));
+		eg.add(new Edge(null , 900, null));
+		eg.add(new Edge(calipsoConquistadores ,800 , null));
+		eg.add(new Edge(villanuevaConquistadores ,1000 , null));
+		eg.add(new Edge(villanuevaSantamonica ,400 , null));
+		eg.add(new Edge(primitivoSantamonica ,500 , null));
+		eg.add(new Edge(primitivoCienpalos ,650 , null));
+		eg.add(new Edge(sanPascualCienpalos ,650 , null));
+		eg.add(new Edge(calipsoTroncalUnida ,800 , null));
+		eg.add(new Edge(amanecerTroncalunida ,550 , null));
+		eg.add(new Edge(amanecerNuevoLatir ,550 , null));
+		eg.add(new Edge(nuevoLatirAguablanca ,900 , null));
+		eg.add(new Edge(aguablancaAndresSanin ,3700 , null));
+		eg.add(new Edge(nuevoLatirAndresSanin ,3300 , null));
+		eg.add(new Edge(andresSaninChiminangos ,5600 , null));
+		eg.add(new Edge(mengaChiminangos ,1800 , null));
+		eg.add(new Edge(andresSaninSalomia ,6000 , null));
+		eg.add(new Edge(belalcazarSanPascual ,750 , null));
+		eg.add(new Edge(florestaBelalcazar ,700 , null));
+		eg.add(new Edge(florestaAtanasioGirardot ,700 , null));
+		eg.add(new Edge(chapineroAtanasioGirardot ,700 , null));
+		eg.add(new Edge(null,350 , null));
+		eg.add(new Edge(chapineroEltrebol ,350 , null));
+		eg.add(new Edge(null ,1400 , null));
+		eg.add(new Edge(andresSaninSietedeAgosto ,750 , null));
+		//eg.add(new Edge( , , null));
+		//eg.add(new Edge( , , null));
+		//eg.add(new Edge( , , null));
+		
+		
+	}
 
 	public void orderDistances() {
+		
+		
 		
 	}
 }
