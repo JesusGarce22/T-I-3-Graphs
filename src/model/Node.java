@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 import javafx.scene.shape.Circle;
 
+
 public class Node {
 
 	private ArrayList<Edge> edge;
-	private Circle name;
-	public Node(ArrayList<Edge> edge, Circle name) {
+	private Circle node;
+	public Node(ArrayList<Edge> edge, Circle node) {
 		this.edge = edge;
-		this.name = name;
+		this.node = node;
 	}
 	public ArrayList<Edge> getEdge() {
 		return edge;
@@ -18,15 +19,12 @@ public class Node {
 	public void setEdge(ArrayList<Edge> edge) {
 		this.edge = edge;
 	}
-	public Circle getName() {
-		return name;
+	public Circle getNode() {
+		return node;
 	}
-	public void setName(Circle name) {
-		this.name = name;
+	public void setNode(Circle node) {
+		this.node = node;
 	}
-	public String showName() {
-		// TODO Auto-generated method stub
-		return name.toString();
-	}
+
 	
 }

@@ -55,5 +55,6 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
+      <Button fx:id="loadDates" layoutX="36.0" layoutY="503.0" mnemonicParsing="false" onAction="#starMethod" prefHeight="34.0" prefWidth="65.0" text="Cargar" />
    </children>
 </AnchorPane>

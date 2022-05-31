@@ -8,16 +8,19 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import model.Edge;
+import model.Graph;
 import model.Node;
 
 public class MainWindows extends Stage {
@@ -330,22 +333,25 @@ public class MainWindows extends Stage {
 	@FXML
 	private ComboBox<String> then;
 	private static double[][] distances;
-
+	   @FXML
+	    private Button loadDates;
 
 	private static ArrayList<Line> edge;
 	private static ArrayList<Circle> node;
 	private static ArrayList<Edge> eg;
 	private static ArrayList<Node> vertex;
+	public static Graph graph;
 
 	public MainWindows() {
 		node= new ArrayList<Circle>();
 		edge = new ArrayList<Line>();
 		eg = new ArrayList<Edge>();
 		vertex = new ArrayList<Node>();
+		graph = new Graph();
 	}
 
 	@FXML
-	void openMapp(ActionEvent event)throws IOException {
+	public void openMapp(ActionEvent event)throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Map.fxml"));
 
 		loader.setController(this);
@@ -358,28 +364,37 @@ public class MainWindows extends Stage {
 	}
 
 	@FXML
-	void exitOfProgram(ActionEvent event) {
+	public void exitOfProgram(ActionEvent event) {
 		System.exit(0);
 	}
 
 	@FXML
-	void search(ActionEvent event) {
+	public void search(ActionEvent event) {
+		if(userName.getText().equalsIgnoreCase("")) {
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.setTitle("ERROR");
+			alert.setHeaderText("LLENAR CASILLA");
+			alert.setContentText("Por favor ingrese un nombre en el campo de texto");
 
+			alert.showAndWait();
+		}else {
+			graph.findWay(userName.getText(),then.getValue(), now.getValue(), vertex);
+		}
 	}
 
 	public void loadLogin() throws IOException {
+		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("MainWindows.fxml"));
 
 		loader.setController(this);
 		Parent addUser = loader.load();
-		chargeComboBox();
+		
 		mainPane.setCenter(addUser);
 		mainPane.getChildren().clear();
 		mainPane.setTop(addUser);
-
 	}
 
-	public void chargeComboBox() {
+	public void chargeComboBox() throws IOException {
 		loadNodes();
 		ArrayList<String> items=new ArrayList<String>();
 		for(int i=0;i<node.size();i++) {
@@ -392,15 +407,19 @@ public class MainWindows extends Stage {
 		distances=new double [node.size()][node.size()];
 		now.getItems().addAll(items);
 		then.getItems().addAll(items);
+		//this.close();
+		//loadLogin();
+		
 	}
 
 	@FXML
-	void back(ActionEvent event) throws IOException {
+	public void back(ActionEvent event) throws IOException {
 		loadLogin();
 		this.close();
 	}
 
 	public void loadNodes() {
+		System.out.println("cargando nodes ini");
 		node.add(nuevoLatir);
 		node.add(aguablanca);
 		node.add(calipso);
@@ -466,11 +485,11 @@ public class MainWindows extends Stage {
 		node.add(floresta);
 		node.add(LlerasCamargo);
 		node.add(brisasdeMayo);
-		loadEdge();
+		System.out.println("cargando nodes final");
 	}
 
 	public void loadEdge() {
-		System.out.println("________________________");
+		System.out.println("cargando edges ini");
 		edge.add(santaRosaCentro);
 		edge.add(ManzanaresFatima);
 		edge.add(ManzanaresPopular);
@@ -548,7 +567,7 @@ public class MainWindows extends Stage {
 		edge.add(sanBoscoSantaLibrada);
 		edge.add(sanNicolasPiloto);
 		edge.add(vipasaAlamos);
-		System.out.println("________________________");
+		System.out.println("cargando edge final");
 		////////////////////////////////////////////////////////////////////////////////////////////
 		ArrayList n1 = new ArrayList<Circle>();
 		n1.add(Icesi);
@@ -1035,8 +1054,8 @@ public class MainWindows extends Stage {
 		//eg.add(new Edge( , , null));
 		//eg.add(new Edge( , , null));
 		//eg.add(new Edge( , , null));
-		System.out.println("________________________");
-		completNodes();
+		System.out.println("cargado las edges");
+	
 	}
 
 	public void completNodes() {
@@ -1052,7 +1071,6 @@ public class MainWindows extends Stage {
 		m2.add(eg.get(60));
 
 		vertex.add(new Node(m2,node.get(i+1)));
-		//System.out.println(vertex.get(0).getEdge().get(0).getDistance());
 
 		ArrayList<Edge> m3 = new ArrayList<Edge>();
 		m3.add(eg.get(48));
@@ -1465,12 +1483,30 @@ public class MainWindows extends Stage {
 		ArrayList<Edge> m64 = new ArrayList<Edge>();
 
 		m64.add(eg.get(81));
-		m64.add(eg.get(95));
+		m64.add(eg.get(94));
 		vertex.add(new Node(m64,node.get(i+63)));
 		
 		ArrayList<Edge> m65 = new ArrayList<Edge>();
 
-		m65.add(eg.get(95));
+		m65.add(eg.get(94));
 		vertex.add(new Node(m65,node.get(i+64)));
+		
+		for(int j=0;j<vertex.size();j++) {
+			if(node.get(j)!=null) {
+			//System.out.println(node.get(j));
+			System.out.println(vertex.get(j).getEdge().get(i).getId());
+			
+			}
+		
+		}
+			
 	}
+	
+    @FXML
+    public void starMethod(ActionEvent event) throws IOException {
+    	chargeComboBox();
+		
+		loadEdge();
+		completNodes();
+    }
 }
