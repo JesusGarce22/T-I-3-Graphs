@@ -31,5 +31,10 @@ public class Edge {
 	public void setNode(ArrayList<Node> node) {
 		this.node = node;
 	}
-	
+	public void printEdge() {
+		if(id!=null && node.size() != 0) {
+					System.out.println(id+" "+distance+" "+node);
+
+		}
+	}
 }
