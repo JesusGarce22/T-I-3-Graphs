@@ -11,7 +11,8 @@ public class Edge {
 	public Edge(Line id, int distance,ArrayList<Node> node) {
 		this.id = id;
 		this.distance = distance;
-		this.setNode(node);
+		this.node = node;
+		// WHY? this.setNode(node);
 	}
 	public Line getId() {
 		return id;

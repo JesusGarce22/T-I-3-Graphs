@@ -333,8 +333,8 @@ public class MainWindows extends Stage {
 	@FXML
 	private ComboBox<String> then;
 	private static double[][] distances;
-	   @FXML
-	    private Button loadDates;
+	@FXML
+	private Button loadDates;
 
 	private static ArrayList<Line> edge;
 	private static ArrayList<Circle> node;
@@ -378,17 +378,28 @@ public class MainWindows extends Stage {
 
 			alert.showAndWait();
 		}else {
-			graph.findWay(userName.getText(),then.getValue(), now.getValue(), vertex);
+			if(then.getValue().equalsIgnoreCase(now.getValue())) {
+				Alert alert = new Alert(AlertType.WARNING);
+				alert.setTitle("ERROR");
+				alert.setHeaderText("DESTINO INCORECTO");
+				alert.setContentText("El punto de partida y destino es el mismo. Por favor seleccione otro punto de destino");
+
+				alert.showAndWait();
+			}else {
+				graph.findWay(userName.getText(),then.getValue(), now.getValue(), vertex);
+
+			}
+
 		}
 	}
 
 	public void loadLogin() throws IOException {
-		
+
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("MainWindows.fxml"));
 
 		loader.setController(this);
 		Parent addUser = loader.load();
-		
+
 		mainPane.setCenter(addUser);
 		mainPane.getChildren().clear();
 		mainPane.setTop(addUser);
@@ -409,7 +420,7 @@ public class MainWindows extends Stage {
 		then.getItems().addAll(items);
 		//this.close();
 		//loadLogin();
-		
+
 	}
 
 	@FXML
@@ -983,7 +994,7 @@ public class MainWindows extends Stage {
 		n83.add(unidadDeportiva);
 		n83.add(lido);
 		eg.add(new Edge(uDeportivaLido ,500 , n83));
-		
+
 		ArrayList n84 = new ArrayList<Circle>();
 		n84.add(pampalinda);
 		n84.add(plazaDetoros);
@@ -993,7 +1004,7 @@ public class MainWindows extends Stage {
 		n85.add(pampalinda);
 		n85.add(refugio);
 		eg.add(new Edge(pampalindaRefugio ,650 , n85));
-		
+
 		ArrayList n86 = new ArrayList<Circle>();
 		n86.add(buitrera);
 		n86.add(univalle);
@@ -1003,7 +1014,7 @@ public class MainWindows extends Stage {
 		n87.add(buitrera);
 		n87.add(melendez);
 		eg.add(new Edge(melendezBuitrera ,800 , n87));
-		
+
 		ArrayList n88 = new ArrayList<Circle>();
 		n88.add(santaRosa);
 		n88.add(frayDamian);
@@ -1013,49 +1024,49 @@ public class MainWindows extends Stage {
 		n89.add(santaRosa);
 		n89.add(centro);
 		eg.add(new Edge(santaRosaCentro ,300 , n89));
-		
+
 		ArrayList n90 = new ArrayList<Circle>();
 		n90.add(plazaCayzedo);
 		n90.add(centro);
 		eg.add(new Edge(centroPlazadecaicedo ,200 , n90));
-		
+
 		ArrayList n91 = new ArrayList<Circle>();
 		n91.add(sanBosco);
 		n91.add(sanPascual);
 		eg.add(new Edge(sanBoscoSanPascual ,200 , n91));
-		
+
 		ArrayList n92 = new ArrayList<Circle>();
 		n92.add(sanBosco);
 		n92.add(santaLibrada);
 		eg.add(new Edge(sanBoscoSantaLibrada ,1000 , n92));
-		
+
 		ArrayList n93 = new ArrayList<Circle>();
 		n93.add(versalles);
 		n93.add(torredeCali);
 		eg.add(new Edge(versallesTorredecali ,1200 , n93));
-		
+
 		ArrayList n94 = new ArrayList<Circle>();
 		n94.add(ermita);
 		n94.add(plazaCayzedo);
 		eg.add(new Edge(plazaCayzedoErmita ,600 , n94));
-		
+
 		ArrayList n95 = new ArrayList<Circle>();
 		n95.add(brisasdeMayo);
 		n95.add(LlerasCamargo);
 		eg.add(new Edge(llerasCamargoBrisasdeMayo ,700 , n95));
 		/*
 
-		
+
 		ArrayList n94 = new ArrayList<Circle>();
 		n94.add(vipasa);
 		n94.add(pradosdelNorte);
 		eg.add(new Edge(vipasaPradosdelnorte ,1000 , n94));
-		**/
+		 **/
 		//eg.add(new Edge( , , null));
 		//eg.add(new Edge( , , null));
 		//eg.add(new Edge( , , null));
 		System.out.println("cargado las edges");
-	
+
 	}
 
 	public void completNodes() {
@@ -1197,25 +1208,25 @@ public class MainWindows extends Stage {
 		m20.add(eg.get(82));
 
 		vertex.add(new Node(m20,node.get(i+19)));
-		
+
 		ArrayList<Edge> m21 = new ArrayList<Edge>();
 
 		m21.add(eg.get(84));
 		m21.add(eg.get(85));
 		vertex.add(new Node(m21,node.get(i+20)));
-		
+
 		ArrayList<Edge> m22 = new ArrayList<Edge>();
 
 		m22.add(eg.get(26));
 		m22.add(eg.get(27));
 		vertex.add(new Node(m22,node.get(i+21)));
-		
+
 		ArrayList<Edge> m23 = new ArrayList<Edge>();
 
 		m23.add(eg.get(82));
 		m23.add(eg.get(84));
 		vertex.add(new Node(m23,node.get(i+22)));
-		
+
 		ArrayList<Edge> m24 = new ArrayList<Edge>();
 
 		m24.add(eg.get(43));
@@ -1223,92 +1234,92 @@ public class MainWindows extends Stage {
 		m24.add(eg.get(63));
 		m24.add(eg.get(64));
 		vertex.add(new Node(m24,node.get(i+23)));
-		
+
 		ArrayList<Edge> m25 = new ArrayList<Edge>();
 
 		m25.add(eg.get(41));
 		m25.add(eg.get(42));
 		m25.add(eg.get(65));
 		vertex.add(new Node(m25,node.get(i+24)));
-		
+
 		ArrayList<Edge> m26 = new ArrayList<Edge>();
 
 		m26.add(eg.get(86));
 		m26.add(eg.get(87));
 
 		vertex.add(new Node(m26,node.get(i+25)));
-		
+
 		ArrayList<Edge> m27 = new ArrayList<Edge>();
 
 		m27.add(eg.get(54));
 		m27.add(eg.get(55));
 		vertex.add(new Node(m27,node.get(i+26)));
-		
+
 		ArrayList<Edge> m28 = new ArrayList<Edge>();
 
 		m28.add(eg.get(88));
 		m28.add(eg.get(89));
 
 		vertex.add(new Node(m28,node.get(i+27)));
-		
+
 		ArrayList<Edge> m29 = new ArrayList<Edge>();
 
 		m29.add(eg.get(89));
 		m29.add(eg.get(90));
 		vertex.add(new Node(m29,node.get(i+28)));
-		
+
 		ArrayList<Edge> m30 = new ArrayList<Edge>();
 
 		m30.add(eg.get(53));
 		m30.add(eg.get(54));
 
 		vertex.add(new Node(m30,node.get(i+29)));
-		
+
 		ArrayList<Edge> m31 = new ArrayList<Edge>();
 
 		m31.add(eg.get(91));
 		m31.add(eg.get(92));
 		vertex.add(new Node(m31,node.get(i+30)));
-		
+
 		ArrayList<Edge> m32 = new ArrayList<Edge>();
 
 		m32.add(eg.get(40));
 		m32.add(eg.get(41));
 
 		vertex.add(new Node(m32,node.get(i+31)));
-		
+
 		ArrayList<Edge> m33 = new ArrayList<Edge>();
 
 		m33.add(eg.get(27));
 		m33.add(eg.get(28));
 		vertex.add(new Node(m33,node.get(i+32)));
-		
+
 		ArrayList<Edge> m34 = new ArrayList<Edge>();
 
 		m34.add(eg.get(35));
 		m34.add(eg.get(36));
 
 		vertex.add(new Node(m34,node.get(i+33)));
-		
+
 		ArrayList<Edge> m35 = new ArrayList<Edge>();
 
 		m35.add(eg.get(25));
 		m35.add(eg.get(93));
 		vertex.add(new Node(m35,node.get(i+34)));
-		
+
 		ArrayList<Edge> m36 = new ArrayList<Edge>();
 
 		m36.add(eg.get(5));
 		m36.add(eg.get(6));
 
 		vertex.add(new Node(m36,node.get(i+35)));
-		
+
 		ArrayList<Edge> m37 = new ArrayList<Edge>();
 
 		m37.add(eg.get(34));
 		m37.add(eg.get(38));
 		vertex.add(new Node(m37,node.get(i+36)));
-		
+
 		ArrayList<Edge> m38 = new ArrayList<Edge>();
 
 		m38.add(eg.get(29));
@@ -1316,66 +1327,66 @@ public class MainWindows extends Stage {
 		m38.add(eg.get(64));
 
 		vertex.add(new Node(m38,node.get(i+37)));
-		
+
 		ArrayList<Edge> m39 = new ArrayList<Edge>();
 
 		m39.add(eg.get(56));
 		m39.add(eg.get(55));
 		vertex.add(new Node(m39,node.get(i+38)));
-		
+
 		ArrayList<Edge> m40 = new ArrayList<Edge>();
 
 		m40.add(eg.get(15));
 		m40.add(eg.get(16));
 
 		vertex.add(new Node(m40,node.get(i+39)));
-		
+
 		ArrayList<Edge> m41 = new ArrayList<Edge>();
 
 		m41.add(eg.get(18));
 		m41.add(eg.get(19));
 		vertex.add(new Node(m41,node.get(i+40)));
-		
+
 		ArrayList<Edge> m42 = new ArrayList<Edge>();
 		m42.add(eg.get(37));
 		m42.add(eg.get(38));
 		m42.add(eg.get(39));
 
 		vertex.add(new Node(m42,node.get(i+41)));
-		
+
 		ArrayList<Edge> m43 = new ArrayList<Edge>();
 
 		m43.add(eg.get(2));
 		m43.add(eg.get(1));
 		m43.add(eg.get(47));
 		vertex.add(new Node(m43,node.get(i+42)));
-		
+
 		ArrayList<Edge> m44 = new ArrayList<Edge>();
 
 		m44.add(eg.get(33));
 		m44.add(eg.get(34));
 		m44.add(eg.get(35));
 		vertex.add(new Node(m44,node.get(i+43)));
-		
+
 		ArrayList<Edge> m45 = new ArrayList<Edge>();
 
 		m45.add(eg.get(13));
 		m45.add(eg.get(14));
 		vertex.add(new Node(m45,node.get(i+44)));
-		
+
 		ArrayList<Edge> m46 = new ArrayList<Edge>();
 
 		m46.add(eg.get(37));
 		m46.add(eg.get(36));
 
 		vertex.add(new Node(m46,node.get(i+45)));
-		
+
 		ArrayList<Edge> m47 = new ArrayList<Edge>();
 
 		m47.add(eg.get(34));
 		m47.add(eg.get(38));
 		vertex.add(new Node(m47,node.get(i+46)));
-		
+
 		ArrayList<Edge> m48 = new ArrayList<Edge>();
 
 		m48.add(eg.get(46));
@@ -1383,130 +1394,130 @@ public class MainWindows extends Stage {
 		m48.add(eg.get(48));
 
 		vertex.add(new Node(m48,node.get(i+47)));
-		
+
 		ArrayList<Edge> m49 = new ArrayList<Edge>();
 
 		m49.add(eg.get(59));
 		m49.add(eg.get(76));
 		vertex.add(new Node(m49,node.get(i+48)));
-		
+
 		ArrayList<Edge> m50 = new ArrayList<Edge>();
 
 		m50.add(eg.get(32));
 		m50.add(eg.get(33));
 
 		vertex.add(new Node(m50,node.get(i+49)));
-		
+
 		ArrayList<Edge> m51 = new ArrayList<Edge>();
 
 		m51.add(eg.get(4));
 		m51.add(eg.get(5));
 		vertex.add(new Node(m51,node.get(i+50)));
-		
+
 		ArrayList<Edge> m52 = new ArrayList<Edge>();
 
 		m52.add(eg.get(30));
 		m52.add(eg.get(31));
 
 		vertex.add(new Node(m52,node.get(i+51)));
-		
+
 		ArrayList<Edge> m53 = new ArrayList<Edge>();
 
 		m53.add(eg.get(39));
 		m53.add(eg.get(40));
 		vertex.add(new Node(m53,node.get(i+52)));
-		
+
 		ArrayList<Edge> m54 = new ArrayList<Edge>();
 
 		m54.add(eg.get(31));
 		m54.add(eg.get(32));
 
 		vertex.add(new Node(m54,node.get(i+53)));
-		
+
 		ArrayList<Edge> m55 = new ArrayList<Edge>();
 
 		m55.add(eg.get(14));
 		m55.add(eg.get(15));
 		vertex.add(new Node(m55,node.get(i+54)));
-		
+
 		ArrayList<Edge> m56 = new ArrayList<Edge>();
 
 		m56.add(eg.get(2));
 		m56.add(eg.get(3));
 
 		vertex.add(new Node(m56,node.get(i+55)));
-		
+
 		ArrayList<Edge> m57 = new ArrayList<Edge>();
 
 		m57.add(eg.get(23));
 		m57.add(eg.get(94));
 		vertex.add(new Node(m57,node.get(i+56)));
-		
+
 		ArrayList<Edge> m58 = new ArrayList<Edge>();
 
 		m58.add(eg.get(25));
 		m58.add(eg.get(26));
 
 		vertex.add(new Node(m58,node.get(i+57)));
-		
+
 		ArrayList<Edge> m59 = new ArrayList<Edge>();
 
 		m59.add(eg.get(12));
 		m59.add(eg.get(13));
 		vertex.add(new Node(m59,node.get(i+58)));
-		
+
 		ArrayList<Edge> m60 = new ArrayList<Edge>();
 
 		m60.add(eg.get(7));
 		m60.add(eg.get(8));
 		m60.add(eg.get(46));
 		vertex.add(new Node(m60,node.get(i+59)));
-		
+
 		ArrayList<Edge> m61 = new ArrayList<Edge>();
 
 		m61.add(eg.get(11));
 		m61.add(eg.get(12));
 		vertex.add(new Node(m61,node.get(i+60)));
-		
+
 		ArrayList<Edge> m62 = new ArrayList<Edge>();
 		m62.add(eg.get(21));
 		m62.add(eg.get(22));
 
 		vertex.add(new Node(m62,node.get(i+61)));
-		
+
 		ArrayList<Edge> m63 = new ArrayList<Edge>();
 
 		m63.add(eg.get(67));
 		m63.add(eg.get(68));
 		vertex.add(new Node(m63,node.get(i+62)));
-		
+
 		ArrayList<Edge> m64 = new ArrayList<Edge>();
 
 		m64.add(eg.get(81));
 		m64.add(eg.get(94));
 		vertex.add(new Node(m64,node.get(i+63)));
-		
+
 		ArrayList<Edge> m65 = new ArrayList<Edge>();
 
 		m65.add(eg.get(94));
 		vertex.add(new Node(m65,node.get(i+64)));
-		
+
 		for(int j=0;j<vertex.size();j++) {
 			if(node.get(j)!=null) {
-			//System.out.println(node.get(j));
-			System.out.println(vertex.get(j).getEdge().get(i).getId());
-			
+				//System.out.println(node.get(j));
+				System.out.println(vertex.get(j).getEdge().get(i).getId());
+
 			}
-		
+
 		}
-			
+
 	}
-	
-    @FXML
-    public void starMethod(ActionEvent event) throws IOException {
-    	chargeComboBox();
-		
+
+	@FXML
+	public void starMethod(ActionEvent event) throws IOException {
+		chargeComboBox();
+
 		loadEdge();
 		completNodes();
-    }
+	}
 }
