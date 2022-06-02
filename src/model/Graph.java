@@ -1,27 +1,27 @@
 package model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import ui.MainWindows;
 
 public class Graph<T> {
 
-	private ArrayList<Line> edge;
-	private ArrayList<Circle> node;
-	ArrayList<Node> enlace;
-	private Circle temp;
+	private static ArrayList<Line> edge= new ArrayList<>();;
+	private static ArrayList<Circle> node = new ArrayList<>();
+	private static ArrayList<Node> enlace;
+	private static Circle temp;
 	public Graph() {
-		edge = new ArrayList<>();
-		node = new ArrayList<>();
 		temp=null;
 	}
 
 	public void findWay(String userName,String then,String destin,ArrayList<Node> vertex ) {
 		System.out.println(userName+" Quiere ir de: "+then+" a "+destin);	
-		System.out.println(vertex);
+	//	System.out.println(vertex);
 		enlace=vertex;
 		for(int i=0;i<vertex.size();i++) {
 			if(vertex.get(i)!=null && vertex.get(i).getNode().getId().equalsIgnoreCase(then)) {
@@ -41,6 +41,17 @@ public class Graph<T> {
 		for(int i=1;i<node.size();i++) {
 			if(node.get(i).getId().equalsIgnoreCase(des)) {
 				System.out.println(" llegamos a "+node.get(i).getId());
+				MainWindows m=MainWindows.getInstance();
+				System.out.println(node+ " "+ edge.size()+" ");
+				try {
+					
+					m.showInTheMap();	
+					
+					
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				return;
 			}
 		}
@@ -52,7 +63,7 @@ public class Graph<T> {
 			if(aux.getEdge().get(i)!=null && min==aux.getEdge().get(i).getDistance()) {
 				Line line=aux.getEdge().get(i).getId();
 				edge.add(line);
-				System.out.println(line.getId()+" Distancia minima "+min);
+				//System.out.println(line.getId()+" Distancia minima "+min);
 				next=aux.getEdge().get(i);
 
 			}
@@ -97,6 +108,5 @@ public class Graph<T> {
 	public void setNode(ArrayList<Circle> node) {
 		this.node = node;
 	}
-
 
 }

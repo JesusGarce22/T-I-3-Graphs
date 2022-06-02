@@ -16,7 +16,7 @@ public class Main extends Application {
 	private MainWindows x;
 	
 	public Main() {
-		x=new MainWindows();
+		x=MainWindows.getInstance();
 	}
 	
 	public static void main(String[] args) {

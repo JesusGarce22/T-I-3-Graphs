@@ -16,6 +16,7 @@ import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
@@ -24,6 +25,7 @@ import model.Graph;
 import model.Node;
 
 public class MainWindows extends Stage {
+	private static MainWindows instance;
 	@FXML
 	private Line llerasCamargoBrisasdeMayo;
 	@FXML
@@ -387,7 +389,11 @@ public class MainWindows extends Stage {
 				alert.showAndWait();
 			}else {
 				graph.findWay(userName.getText(),then.getValue(), now.getValue(), vertex);
-
+				for(int j=0;j<node.size();j++) {
+					if(node.get(j).getId().equalsIgnoreCase(then.getValue()) || node.get(j).getId().equalsIgnoreCase(now.getValue())) {
+						node.get(j).setFill(Color.RED);
+					}
+				}
 			}
 
 		}
@@ -426,7 +432,6 @@ public class MainWindows extends Stage {
 	@FXML
 	public void back(ActionEvent event) throws IOException {
 		loadLogin();
-		this.close();
 	}
 
 	public void loadNodes() {
@@ -1519,5 +1524,31 @@ public class MainWindows extends Stage {
 
 		loadEdge();
 		completNodes();
+	}
+
+	public static MainWindows getInstance() {
+		if (instance == null) {
+			instance = new MainWindows();
+			;
+		}
+
+		return instance;
+	}
+
+	public void showInTheMap() throws IOException{
+		Graph graph = new Graph();
+		ArrayList<Circle> circles=graph.getNode();
+		ArrayList<Line> lines=graph.getEdge();
+		if(circles.size()==0) {
+			System.out.println("No paso fue na");
+
+		}
+		for(int i=0;i<circles.size();i++) {
+			circles.get(i).setFill(Color.RED);
+			circles.get(i).setRadius(10.0);
+			System.out.println(" de: "+circles.get(i));
+
+		}
+
 	}
 }
