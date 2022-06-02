@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="714.0" style="-fx-background-color: #19af;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="mapp" fitHeight="687.0" fitWidth="547.0" layoutX="153.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Doc/mapComplet.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="95.0" orientation="VERTICAL" prefHeight="687.0" prefWidth="50.0" />
+      <Button fx:id="backBt" layoutX="25.0" layoutY="613.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="70.0" text="Atras" />
+      <Circle fx:id="universidades" fill="DODGERBLUE" layoutX="379.0" layoutY="593.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="univalle" fill="DODGERBLUE" layoutX="349.0" layoutY="578.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="univalleUniversidades" endX="21.0" endY="8.5" layoutX="353.0" layoutY="581.0" startX="-0.75" startY="-2.0" />
+      <Circle fx:id="buitrera" fill="DODGERBLUE" layoutX="332.0" layoutY="569.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="buitreraUnivalle" endX="8.75" layoutX="338.0" layoutY="576.0" startX="-3.5" startY="-5.75" />
+      <Circle fx:id="melendez" fill="DODGERBLUE" layoutX="319.0" layoutY="543.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="melendezBuitrera" endX="8.25" endY="14.5" layoutX="321.0" layoutY="553.0" startX="-1.5" startY="-7.0" />
+      <Circle fx:id="caldas" fill="DODGERBLUE" layoutX="307.0" layoutY="473.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="capri" fill="DODGERBLUE" layoutX="311.0" layoutY="502.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="refugio" fill="DODGERBLUE" layoutX="304.0" layoutY="449.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="pampalinda" fill="DODGERBLUE" layoutX="300.0" layoutY="429.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="capriMelendez" endX="9.0" endY="31.75" layoutX="309.0" layoutY="508.0" startX="2.0" startY="-3.0" />
+      <Line fx:id="caldasCapri" endX="2.25" endY="19.75" layoutX="308.0" layoutY="479.0" startY="-3.0" />
+      <Line fx:id="pampalindaRefugio" endX="2.0" endY="15.0" layoutX="302.0" layoutY="431.0" startX="-0.5" startY="1.0" />
+      <Line fx:id="refugioCaldas" endX="4.25" endY="15.75" layoutX="302.0" layoutY="454.0" startX="2.0" startY="-2.0" />
+      <Circle fx:id="simonBolivar" fill="DODGERBLUE" layoutX="408.0" layoutY="461.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="simonBolivarUniversidades" endX="-20.5" endY="116.75" layoutX="406.0" layoutY="472.0" startX="2.0" startY="-3.0" />
+      <Circle fx:id="calipso" fill="DODGERBLUE" layoutX="510.0" layoutY="325.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="calipsoSimonbolivar" endX="-41.75" endY="38.25" layoutX="459.0" layoutY="374.0" startX="47.5" startY="-42.5" />
+      <Line endX="-41.75" endY="38.25" layoutX="451.0" layoutY="415.0" startX="-34.25" startY="-2.75" />
+      <Circle fx:id="troncalUnida" fill="DODGERBLUE" layoutX="542.0" layoutY="334.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="amanecer" fill="DODGERBLUE" layoutX="556.0" layoutY="344.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="nuevoLatir" fill="DODGERBLUE" layoutX="575.0" layoutY="360.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="aguablanca" fill="DODGERBLUE" layoutX="598.0" layoutY="383.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="nuevoLatirAguablanca" endX="12.25" endY="10.25" layoutX="581.0" layoutY="367.0" startX="-3.5" startY="-5.75" />
+      <Line fx:id="amanecerNuevoLatir" endX="7.75" endY="5.75" layoutX="565.0" layoutY="352.0" startX="-6.0" startY="-7.0" />
+      <Line fx:id="amanecerTroncalunida" endX="4.25" endY="1.0" layoutX="549.0" layoutY="341.0" startX="-4.0" startY="-5.5" />
+      <Line fx:id="calipsoTroncalUnida" endX="17.5" endY="8.5" layoutX="522.0" layoutY="323.0" startX="-6.75" startY="-3.0" />
+      <Circle fx:id="conquistadores" fill="DODGERBLUE" layoutX="490.0" layoutY="322.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="santaMonica" fill="DODGERBLUE" layoutX="453.0" layoutY="289.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="villanueva" fill="DODGERBLUE" layoutX="468.0" layoutY="300.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="sanPascual" fill="DODGERBLUE" layoutX="388.0" layoutY="251.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cienPalos" fill="DODGERBLUE" layoutX="417.0" layoutY="269.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="primitivo" fill="DODGERBLUE" layoutX="437.0" layoutY="280.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="santaRosa" fill="DODGERBLUE" layoutX="379.0" layoutY="234.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="petecuy" fill="DODGERBLUE" layoutX="386.0" layoutY="226.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="frayDamian" fill="DODGERBLUE" layoutX="383.0" layoutY="246.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="sucre" fill="DODGERBLUE" layoutX="393.0" layoutY="246.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="calipsoConquistadores" endX="17.5" endY="4.0" layoutX="488.0" layoutY="325.0" startX="3.75" startY="-0.5" />
+      <Line fx:id="villanuevaConquistadores" endX="19.75" endY="16.5" layoutX="468.0" layoutY="303.0" startX="2.75" startY="-1.75" />
+      <Line fx:id="villanuevaSantamonica" endX="-9.75" endY="-11.0" layoutX="465.0" layoutY="302.0" startY="-5.0" />
+      <Line fx:id="primitivoSantamonica" endX="-8.75" endY="-12.0" layoutX="449.0" layoutY="293.0" startX="1.5" startY="-5.25" />
+      <Line fx:id="primitivoCienpalos" endX="-9.0" endY="-10.75" layoutX="429.0" layoutY="281.0" startX="5.0" startY="-3.0" />
+      <Line fx:id="sanPascualCienpalos" endX="-14.0" endY="-13.25" layoutX="404.0" layoutY="266.0" startX="10.75" startY="1.25" />
+      <Circle fx:id="lido" fill="DODGERBLUE" layoutX="296.0" layoutY="353.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="unidadDeportiva" fill="DODGERBLUE" layoutX="288.0" layoutY="372.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="plazaDetoros" fill="DODGERBLUE" layoutX="297.0" layoutY="402.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="pampalindaPlazadetoros" endX="0.5" endY="12.75" layoutX="300.0" layoutY="413.0" startX="-2.25" startY="-8.0" />
+      <Circle fx:id="Icesi" fill="DODGERBLUE" layoutX="402.0" layoutY="656.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="universidadesIcesi" endX="37.0" endY="59.0" layoutX="363.0" layoutY="591.0" startX="18.75" startY="8.25" />
+      <Line fx:id="uDeportivaPlazadetoros" endX="0.75" endY="15.0" layoutX="297.0" layoutY="384.0" startX="-1.75" startY="-11.25" />
+      <Line fx:id="uDeportivaLido" endX="-13.0" endY="-25.5" layoutX="307.0" layoutY="394.0" startX="-10.75" startY="-38.75" />
+      <Circle fx:id="brisasdeMayo" fill="DODGERBLUE" layoutX="219.0" layoutY="365.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="LlerasCamargo" fill="DODGERBLUE" layoutX="229.0" layoutY="356.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="TierraBlanca" fill="DODGERBLUE" layoutX="242.0" layoutY="354.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="uDeportivaTierraBlanca" endX="-46.25" endY="-48.75" layoutX="292.0" layoutY="403.0" startX="-8.5" startY="-36.5" />
+      <Line fx:id="llerasCamargoTierraBlanca" endX="-63.0" endY="-59.25" layoutX="302.0" layoutY="413.0" startX="-70.25" startY="-57.25" />
+      <Line fx:id="llerasCamargoBrisasdeMayo" endX="-85.25" endY="-64.5" layoutX="312.0" layoutY="423.0" startX="-90.5" startY="-59.25" />
+      <Circle fx:id="manzanadelSaber" fill="DODGERBLUE" layoutX="324.0" layoutY="289.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="estadio" fill="DODGERBLUE" layoutX="316.0" layoutY="303.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="tequendama" fill="DODGERBLUE" layoutX="300.0" layoutY="339.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="TequendamaLido" endX="-15.75" endY="-30.0" layoutX="312.0" layoutY="380.0" startX="-13.5" startY="-38.0" />
+      <Line fx:id="tequendamaEstadio" endX="-20.75" endY="-54.0" layoutX="322.0" layoutY="390.0" startX="-6.75" startY="-84.0" />
+      <Line fx:id="manzanadelsaberEstadio" endX="-10.5" endY="-74.25" layoutX="329.0" layoutY="375.0" startX="-6.75" startY="-84.0" />
+      <Circle fx:id="sanBosco" fill="DODGERBLUE" layoutX="362.0" layoutY="253.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="santaLibrada" fill="DODGERBLUE" layoutX="347.0" layoutY="264.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="manzanadelsaberSantaLibrada" endX="-12.5" endY="-98.0" layoutX="339.0" layoutY="385.0" startX="5.75" startY="-119.0" />
+      <Line fx:id="sanBoscoSantaLibrada" endX="0.5" endY="-133.25" layoutX="349.0" layoutY="395.0" startX="10.75" startY="-140.5" />
+      <Line fx:id="sanBoscoSanPascual" endX="1.0" endY="-151.0" layoutX="364.0" layoutY="404.0" startX="22.25" startY="-151.0" />
+      <Line fx:id="FrayDamianSanPascual" endX="9.25" endY="-166.0" layoutX="374.0" layoutY="414.0" startX="12.5" startY="-163.75" />
+      <Line fx:id="sucreSanPascual" endX="9.25" endY="-166.0" layoutX="381.0" layoutY="416.0" startX="12.25" startY="-168.25" />
+      <Line fx:id="FrayDamianSantaRosa" endX="9.0" endY="-165.0" layoutX="370.0" layoutY="401.0" startX="12.25" startY="-157.0" />
+      <Circle fx:id="andresSanin" fill="DODGERBLUE" layoutX="590.0" layoutY="246.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="nuevoLatirAndresSanin" endX="-3.0" endY="61.0" layoutX="580.0" layoutY="296.0" startX="9.75" startY="-42.5" />
+      <Circle fx:id="belalzacar" fill="DODGERBLUE" layoutX="424.0" layoutY="245.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="villacolombia" fill="DODGERBLUE" layoutX="522.0" layoutY="247.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="elTrebol" fill="DODGERBLUE" layoutX="537.0" layoutY="248.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="chapinero" fill="DODGERBLUE" layoutX="506.0" layoutY="245.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="atanasioGirardot" fill="DODGERBLUE" layoutX="480.0" layoutY="242.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="floresta" fill="DODGERBLUE" layoutX="450.0" layoutY="240.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="sieteDeAgosto" fill="DODGERBLUE" layoutX="572.0" layoutY="240.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="sucreBelalcazar" endX="4.5" endY="-180.25" layoutX="391.0" layoutY="426.0" startX="31.0" startY="-183.0" />
+      <Line fx:id="belalcazarSanPascual" endX="-14.25" endY="-166.75" layoutX="404.0" layoutY="419.0" startX="17.0" startY="-172.25" />
+      <Line fx:id="florestaBelalcazar" endX="25.75" endY="-192.25" layoutX="401.0" layoutY="436.0" startX="45.75" startY="-196.0" />
+      <Line fx:id="florestaAtanasioGirardot" endX="41.5" endY="-206.25" layoutX="411.0" layoutY="446.0" startX="65.5" startY="-203.0" />
+      <Line fx:id="chapineroAtanasioGirardot" endX="48.0" endY="-208.0" layoutX="435.0" layoutY="451.0" startX="68.5" startY="-206.0" />
+      <Line fx:id="chapineroEltrebol" endX="63.5" endY="-215.5" layoutX="445.0" layoutY="461.0" startX="74.5" startY="-214.0" />
+      <Line fx:id="villacolombiaEltrebol" endX="69.25" endY="-224.25" layoutX="455.0" layoutY="471.0" startX="79.25" startY="-222.5" />
+      <Line fx:id="villacolombiaSietedeAgosto" endX="61.25" endY="-224.5" layoutX="479.0" layoutY="473.0" startX="90.0" startY="-233.0" />
+      <Line fx:id="andresSaninSietedeAgosto" endX="86.25" endY="-243.75" layoutX="489.0" layoutY="483.0" startX="102.0" startY="-243.75" />
+      <Line fx:id="aguablancaAndresSanin" endX="10.5" endY="69.75" layoutX="590.0" layoutY="306.0" startX="4.0" startY="-53.75" />
+      <Line fx:id="simonBolivarRefugio" endX="-108.0" endY="-33.0" layoutX="416.0" layoutY="482.0" startX="-15.0" startY="-22.5" />
+      <Circle fx:id="plazaCayzedo" fill="DODGERBLUE" layoutX="373.0" layoutY="212.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="ermita" fill="DODGERBLUE" layoutX="369.0" layoutY="198.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="sanPedro" fill="DODGERBLUE" layoutX="376.0" layoutY="198.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="torredeCali" fill="DODGERBLUE" layoutX="375.0" layoutY="190.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="centro" fill="DODGERBLUE" layoutX="377.0" layoutY="224.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="sucrePetecuy" endX="9.0" endY="-166.0" layoutX="377.0" layoutY="394.0" startX="15.25" startY="-149.5" />
+      <Line fx:id="sanPedroPetecuy" endX="8.0" endY="-167.0" layoutX="368.0" layoutY="367.0" startX="17.25" startY="-143.5" />
+      <Line fx:id="santaRosaCentro" endX="-2.25" endY="-184.75" layoutX="380.0" layoutY="411.0" startX="-2.25" startY="-178.75" />
+      <Line fx:id="centroPlazadecaicedo" endX="-4.0" endY="-185.75" layoutX="377.0" layoutY="399.0" startX="-1.0" startY="-177.0" />
+      <Line fx:id="plazaCayzedoErmita" endX="-3.0" endY="-186.0" layoutX="372.0" layoutY="386.0" startX="0.5" startY="-176.0" />
+      <Line fx:id="ermitaTorredecali" endX="3.5" endY="-180.75" layoutX="370.0" layoutY="372.0" startY="-175.75" />
+      <Line fx:id="sanPedroTorredecali" endX="-3.5" endY="-190.5" layoutX="380.0" layoutY="382.0" startX="-3.5" startY="-186.0" />
+      <Circle fx:id="sanNicolas" fill="DODGERBLUE" layoutX="398.0" layoutY="180.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="lasAmericas" fill="DODGERBLUE" layoutX="400.0" layoutY="155.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="piloto" fill="DODGERBLUE" layoutX="414.0" layoutY="173.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="rioCali" fill="DODGERBLUE" layoutX="401.0" layoutY="170.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="versalles" fill="DODGERBLUE" layoutX="391.0" layoutY="169.0" radius="2.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="fatima" fill="DODGERBLUE" layoutX="435.0" layoutY="160.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="Menga" fill="DODGERBLUE" layoutX="475.0" layoutY="39.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="alamos" fill="DODGERBLUE" layoutX="454.0" layoutY="63.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="vipasa" fill="DODGERBLUE" layoutX="440.0" layoutY="90.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="pradosdelNorte" fill="DODGERBLUE" layoutX="427.0" layoutY="110.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="pasodelComercio" fill="DODGERBLUE" layoutX="549.0" layoutY="33.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="versallesTorredecali" endX="10.25" endY="-212.25" layoutX="380.0" layoutY="382.0" startX="-3.5" startY="-193.75" />
+      <Line fx:id="sanNicolasTorredecali" endX="8.25" endY="-187.0" layoutX="388.0" layoutY="369.0" startX="-10.5" startY="-178.75" />
+      <Line fx:id="rioCaliTorredecali" endX="20.0" endY="-210.0" layoutX="380.0" layoutY="382.0" startX="-2.5" startY="-193.25" />
+      <Line fx:id="sanNicolasPiloto" endX="14.0" endY="-204.5" layoutX="398.0" layoutY="379.0" startX="2.0" startY="-199.75" />
+      <Line fx:id="fatimaPiloto" endX="24.5" endY="-226.75" layoutX="408.0" layoutY="389.0" startX="8.25" startY="-216.75" />
+      <Line fx:id="fatimaRiocali" endX="14.0" endY="-238.0" layoutX="418.0" layoutY="399.0" startX="-14.5" startY="-230.25" />
+      <Line fx:id="lasAmericasVersalles" endX="9.0" endY="-235.0" layoutX="390.0" layoutY="392.0" startX="3.0" startY="-224.75" />
+      <Line fx:id="lasAmericasPradosdelnorte" endX="25.25" endY="-289.25" layoutX="400.0" layoutY="402.0" startX="2.0" startY="-248.75" />
+      <Line fx:id="vipasaPradosdelnorte" endX="27.75" endY="-319.5" layoutX="410.0" layoutY="412.0" startX="18.75" startY="-304.5" />
+      <Line fx:id="vipasaAlamos" endX="33.0" endY="-357.0" layoutX="420.0" layoutY="422.0" startX="21.25" startY="-335.25" />
+      <Line fx:id="mengaAlamos" endX="38.0" endY="-390.25" layoutX="430.0" layoutY="432.0" startX="25.75" startY="-372.5" />
+      <Line fx:id="mengaPasodelComercio" endX="101.0" endY="-408.25" layoutX="440.0" layoutY="442.0" startX="42.5" startY="-403.5" />
+      <Line fx:id="mengaChiminangos" endX="70.25" endY="-381.0" layoutX="450.0" layoutY="452.0" startX="30.5" startY="-408.25" />
+      <Circle fx:id="chiminangos" fill="DODGERBLUE" layoutX="522.0" layoutY="73.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="floraIndustrial" fill="DODGERBLUE" layoutX="506.0" layoutY="92.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="salomia" fill="DODGERBLUE" layoutX="485.0" layoutY="110.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="popular" fill="DODGERBLUE" layoutX="466.0" layoutY="130.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="manzanares" fill="DODGERBLUE" layoutX="450.0" layoutY="145.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="pasoDelComercioChiminangos" endX="85.25" endY="-423.0" layoutX="460.0" layoutY="462.0" startX="65.25" startY="-391.0" />
+      <Line fx:id="chiminangosFloraindustrial" endX="50.0" endY="-396.75" layoutX="470.0" layoutY="472.0" startX="38.0" startY="-382.5" />
+      <Line fx:id="salomiaFloraindustrial" endX="48.75" endY="-398.25" layoutX="454.0" layoutY="491.0" startX="33.5" startY="-383.25" />
+      <Line fx:id="salomiaPopular" endX="47.25" endY="-397.75" layoutX="435.0" layoutY="509.0" startX="33.0" startY="-381.5" />
+      <Line fx:id="ManzanaresPopular" endX="18.5" endY="-387.25" layoutX="445.0" layoutY="519.0" startX="6.5" startY="-376.75" />
+      <Line fx:id="ManzanaresFatima" endX="16.0" endY="-389.0" layoutX="431.0" layoutY="534.0" startX="6.5" startY="-376.75" />
+      <Line fx:id="andresSaninChiminangos" endX="55.5" endY="-396.0" layoutX="470.0" layoutY="472.0" startX="124.0" startY="-232.0" />
+      <Line fx:id="andresSaninPasoDelComercio" endX="82.0" endY="-416.5" layoutX="473.0" layoutY="453.0" startX="123.5" startY="-210.5" />
+      <Line fx:id="andresSaninSalomia" endX="7.5" endY="-369.0" layoutX="480.0" layoutY="482.0" startX="107.0" startY="-243.0" />
+      <Line fx:id="andresSaninCalipso" endX="15.5428466796875" endY="-173.70709228515625" layoutX="499.0" layoutY="493.0" startX="84.0" startY="-245.0" />
+   </children>
+</AnchorPane>
